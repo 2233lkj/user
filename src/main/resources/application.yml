@@ -1,0 +1,21 @@
+# Redis配置
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      timeout: 10000
+      password:    # 如果没有密码，保持为空
+      lettuce:
+        pool:
+          max-active: 8
+          max-wait: -1
+          max-idle: 8
+          min-idle: 0
+        shutdown-timeout: 100ms
+      connect-timeout: 5000
+      client-type: lettuce
+      retry:
+        max-attempts: 3
+        initial-interval: 1000
