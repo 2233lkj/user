@@ -1,8 +1,15 @@
+/**
+ * @author 潘楠
+ * @cooperators 协作者
+ * @date 2025-3-11
+ * @description 使用验证码登录
+ */
 package com.springboot.logindemo.dto;
 
 public class VerifyLoginRequestDto {
     private String phoneNum;
     private String verifyCode;
+    private Boolean isAdmin;
 
     public String getPhoneNum() {
         return phoneNum;
@@ -18,5 +25,13 @@ public class VerifyLoginRequestDto {
 
     public void setVerifyCode(String verifyCode) {
         this.verifyCode = verifyCode;
+    }
+    
+    public Boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(Boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
 }

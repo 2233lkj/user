@@ -1,16 +1,23 @@
+/**
+ * @author 潘楠
+ * @cooperators 协作者
+ * @date 2025-3-11
+ * @description 修改用户信息
+ */
 package com.springboot.logindemo.dto;
 
 public class UpdateUserRequestDto {
-    private String account;
+    private String token;
     private String newPhoneNum;
     private String newUname;
+    private String verifyCode;
 
-    public String getAccount() {
-        return account;
+    public String getToken() {
+        return token;
     }
 
-    public void setAccount(String account) {
-        this.account = account;
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public String getNewPhoneNum() {
@@ -27,5 +34,13 @@ public class UpdateUserRequestDto {
 
     public void setNewUname(String newUname) {
         this.newUname = newUname;
+    }
+
+    public String getVerifyCode() {
+        return verifyCode;
+    }
+
+    public void setVerifyCode(String verifyCode) {
+        this.verifyCode = verifyCode;
     }
 }

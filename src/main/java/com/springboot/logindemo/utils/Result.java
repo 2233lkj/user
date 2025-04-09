@@ -1,3 +1,9 @@
+/**
+ * @author 潘楠
+ * @cooperators 协作者
+ * @date 2025-3-6
+ * @description 人员管理模块返回结果
+ */
 package com.springboot.logindemo.utils;
 
 public class Result<T> {

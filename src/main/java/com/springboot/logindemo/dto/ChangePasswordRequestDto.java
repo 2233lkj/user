@@ -1,3 +1,9 @@
+/**
+ * @author 潘楠
+ * @cooperators 协作者
+ * @date 2025-3-11
+ * @description 修改用户密码
+ */
 package com.springboot.logindemo.dto;
 
 public class ChangePasswordRequestDto {

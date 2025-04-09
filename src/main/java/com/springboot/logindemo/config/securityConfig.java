@@ -1,3 +1,9 @@
+/**
+ * @author 潘楠
+ * @cooperators 协作者
+ * @date 2025-3-6
+ * @description 人员管理模块安全配置
+ */
 package com.springboot.logindemo.config;
 
 import org.springframework.context.annotation.Bean;
@@ -19,9 +25,7 @@ public class securityConfig {
         http
                 .csrf(csrf -> csrf.disable()) // 禁用CSRF保护，适用于开发和测试
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/user/sendMsg", "/api/user/register", "/api/user/login/password",
-                                "/api/user/login/verify", "/api/user/changePassword",
-                                "/api/user/admin/updateLoginPermission", "/api/user/delete", "/api/user/update")
+                        .requestMatchers("/api/user/**","/api/role/**", "/api/department/**")
                         .permitAll() // 放行指定路径
                         .anyRequest().authenticated() // 所有其他请求需要认证
                 );

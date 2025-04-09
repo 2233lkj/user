@@ -1,3 +1,9 @@
+/**
+ * @author 潘楠
+ * @cooperators 协作者
+ * @date 2025-3-6
+ * @description 人员管理模块短信服务工具类
+ */
 package com.springboot.logindemo.utils;
 
 import com.aliyuncs.DefaultAcsClient;

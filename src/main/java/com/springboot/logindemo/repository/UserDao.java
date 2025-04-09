@@ -1,8 +1,16 @@
+/**
+ * @author 潘楠
+ * @cooperators 协作者
+ * @date 2025-3-6
+ * @description 人员管理模块角色模块
+ */
 package com.springboot.logindemo.repository;
 
 import com.springboot.logindemo.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+import java.util.List;
 
 @Repository
 public interface UserDao extends JpaRepository<User, Long> {
@@ -13,4 +21,7 @@ public interface UserDao extends JpaRepository<User, Long> {
     User findByPhonenum(String phonenum);
 
     User findByPhonenumAndPassword(String phonenum, String password);
+
+    @Query("SELECT DISTINCT u FROM User u LEFT JOIN FETCH u.departments LEFT JOIN FETCH u.roles")
+    List<User> findAllWithDepartmentsAndRoles();
 }
